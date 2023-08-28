@@ -1,0 +1,9 @@
+animal: id_animal[COUNTER], name_animal, species, age_animal[INT], weight[FLOAT], size[FLOAT], is_hungry[BOOLEAN], is_sleeping[BOOLEAN], is_sick[BOOLEAN]
+animal_enclosure, 11 animal, 0N enclosure
+enclosure: id_enclosure[COUNTER], name_enclosure, cleanness, number_of_animals[INT], type
+
+employee_zoo, 01 employee, 0N zoo: since[DATETIME]
+zoo: id_zoo[COUNTER], name_zoo, employees, number_of_enclosures[INT]
+enclosure_zoo, 11 enclosure, 0N zoo
+
+employee: id_employee[COUNTER], name_employee, date_of_birth[DATE], sex_employee[CHAR]
