@@ -16,17 +16,22 @@ CREATE TABLE IF NOT EXISTS enclosure (
     id_zoo INT REFERENCES zoo(id_zoo)
 );
 
+CREATE TABLE IF NOT EXISTS species (
+    id_species INT PRIMARY KEY AUTO_INCREMENT,
+    label VARCHAR(50)
+);
+
 CREATE TABLE IF NOT EXISTS animal (
     id_animal INT PRIMARY KEY AUTO_INCREMENT,
     name_animal VARCHAR(50),
-    species VARCHAR(50),
     age INT,
     weight FLOAT,
     size FLOAT,
     is_hungry BOOLEAN,
     is_sleeping BOOLEAN,
     is_sick BOOLEAN,
-    id_enclosure INT REFERENCES enclosure(id_enclosure)
+    id_enclosure INT REFERENCES enclosure(id_enclosure),
+    id_species INT REFERENCES species(id_species)
 );
 
 CREATE TABLE IF NOT EXISTS employee (
@@ -42,4 +47,3 @@ CREATE TABLE IF NOT EXISTS employee_zoo (
     id_zoo INT REFERENCES zoo(id_zoo),
     since DATETIME
 );
-
