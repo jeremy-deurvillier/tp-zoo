@@ -199,7 +199,7 @@ abstract class Animal
         if (isset($datas['id_animal'])) $this->setId($datas['id_animal']);
         if (isset($datas['name_animal'])) $this->setName($datas['name_animal']);
         if (isset($datas['species'])) $this->setSpecies($datas['species']);
-        if (isset($datas['age_animal'])) $this->setAge($datas['age_animal']);
+        if (isset($datas['age'])) $this->setAge($datas['age']);
         if (isset($datas['weight'])) $this->setWeight($datas['weight']);
         if (isset($datas['size'])) $this->setSize($datas['size']);
         if (isset($datas['is_hungry'])) $this->setIsHungry($datas['is_hungry']);
