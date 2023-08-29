@@ -1,4 +1,7 @@
-animal: id_animal[COUNTER], name_animal, species, age[INT], weight[FLOAT], size[FLOAT], is_hungry[BOOLEAN], is_sleeping[BOOLEAN], is_sick[BOOLEAN]
+species_animal, 11 animal, 0N species
+species: id_species[COUNTER], label
+
+animal: id_animal[COUNTER], name_animal, age[INT], weight[FLOAT], size[FLOAT], is_hungry[BOOLEAN], is_sleeping[BOOLEAN], is_sick[BOOLEAN]
 animal_enclosure, 11 animal, 0N enclosure
 enclosure: id_enclosure[COUNTER], name_enclosure, cleanness, type
 
