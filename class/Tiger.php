@@ -1,10 +1,10 @@
 <?php
 
-require_once('traits/pate.php');
+require_once('traits/foot.php');
 
 class Tiger extends Animal
 {
-    use pate;
+    use foot;
 
     public function __construct(array $datas)
     {
