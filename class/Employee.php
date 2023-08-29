@@ -122,6 +122,61 @@ class Employee
          if (isset($datas['date_of_birth'])) $this->setDateOfBirth($datas['date_of_birth']);
          if (isset($datas['created_at'])) $this->setCreatedAt($datas['created_at']);
      }
+
+     public function giveToEat(string $food, Animal $animal):bool
+     {
+         if (!$animal->getIsSleeping())
+         {
+             $animal->eat($food);
+         }
+
+         return $animal->getIsHungry();
+     }
+
+     public function toClean(Enclosure $enclosure):string
+     {
+         if ($enclosure->getCleanness() == Enclosure::DIRTY && $enclosure->counter() === 0)
+         {
+             $enclosure->setCleanness(Enclosure::CLEAN);
+         }
+
+         return $enclosure->getCleanness();
+     }
+
+     public function liberate(Animal $animal, Enclosure $enclosure):int
+     {
+         return $enclosure->add($animal);
+     }
+
+     public function pull(Animal $animal, Enclosure $enclosure):int
+     {
+         return $enclosure->remove($animal);
+     }
+
+     public function transfer(Animal $animal, Enclosure $enclosureStart, Enclosure $enclosureEnd):array
+     {
+         $start = $enclosureStart->remove($animal);
+         $end = $enclosureEnd->add($animal);
+
+         return ['start' => $start, 'end' => $end];
+     }
+
+     public function toTakeCare(Animal $animal):bool
+     {
+         if ($animal->getIsSick()) $animal->setIsSick(false);
+
+         return $animal->getIsSick();
+     }
+
+     public function examineEnclosure(Enclosure $enclosure):array
+     {
+         return $enclosure->getStatus();
+     }
+
+     public function doAction($action):string
+     {
+         return $action;
+     }
 }
 
 ?>

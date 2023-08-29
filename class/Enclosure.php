@@ -4,6 +4,11 @@ abstract class Enclosure
 {
     const MAX_ANIMALS = 6;
 
+    // Propreté
+    const CLEAN = 'bon';
+    const CORRECT = 'correct';
+    const DIRTY = 'mauvais';
+
     private int $id;
     private string $name;
     private string $cleanness;
@@ -133,10 +138,22 @@ abstract class Enclosure
      public function add(Animal $animal):int
      {
          if (count($this->getAnimals()) < self::MAX_ANIMALS) {
-             $this->animals[] = $animal;
+             if ($this->counter() > 0) {
+                 if (get_class($this->animals[0]) === get_class($animal)) {
+                    $this->animals[] = $animal;
+
+                    return count($this->getAnimals());
+                 } else {
+                     return -1;
+                 }
+             } else {
+                $this->animals[] = $animal;
+
+                return count($this->getAnimals());
+             }
          }
 
-         return count($this->getAnimals());
+         return -1;
      }
 
      public function remove(Animal $animal):int
