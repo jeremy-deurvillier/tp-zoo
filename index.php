@@ -2,10 +2,13 @@
 
 require_once('./config/autoload.php');
 
+$zoo = new Zoo(['name_zoo' => 'Mon Zoo']);
 $terre = new LandPark(['name_enclosure' => 'terre']);
 $ben = new Tiger(['name_animal' => 'Ben']);
 $lou = new Bear(['name_animal' => 'Lou']);
 $jeje = new Employee(['name_employee' => 'Jéjé']);
+
+$zoo->setEnclosures([$terre]);
 
 $terre->add($ben);
 echo $terre->counter() . PHP_EOL;
