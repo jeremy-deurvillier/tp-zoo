@@ -14,8 +14,8 @@ include_once('includes/main-sidebar.php');
 //include_once('includes/form-actions.php');
 
 // Others sections
-include_once('includes/contact.php');
-include_once('includes/about.php');
+include_once('includes/others/contact.php');
+include_once('includes/others/about.php');
 
 include_once('includes/footer.php');
 

@@ -18,7 +18,7 @@
             <li class="uk-nav-divider"></li>
 
             <li class="uk-nav-header">Animaux</li>
-            <li><a href="#animalsList" data-uk-toggle><span class="uk-margin-small-right" uk-icon="icon: minus"></span>Tous les animaux</a></li>
+            <li><a href="#animalsList" data-uk-toggle><span class="uk-margin-small-right" uk-icon="icon: heart"></span>Tous les animaux</a></li>
             <li><a href="#addAnimal" data-uk-toggle><span class="uk-margin-small-right" uk-icon="icon: plus"></span>Adopter</a></li>
         </ul>
 
