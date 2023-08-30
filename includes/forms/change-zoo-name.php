@@ -7,12 +7,12 @@
                 <div class="uk-margin">
                     <div class="uk-inline">
                         <span class="uk-form-icon" uk-icon="icon: pencil"></span>
-                        <input class="uk-input" type="text" name="name" aria-label="changeZooName">
+                        <input class="uk-input" type="text" name="name" value="<?= $zoo->getName() ?>" aria-label="changeZooName">
                     </div>
                 </div>
                 <div class="uk-margin">
                     <div class="uk-width-1-1">
-                        <input class="uk-button uk-button-primary uk-width-1-1" type="submit" value="Changer le nom">
+                        <input class="uk-button uk-button-primary uk-width-1-1" type="submit" name="zooNameChange" value="Changer le nom">
                     </div>
                 </div>
             </div>

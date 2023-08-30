@@ -119,7 +119,7 @@ class Zoo
      {
          if (isset($datas['id_zoo'])) $this->setId($datas['id_zoo']);
          if (isset($datas['name_zoo'])) $this->setName($datas['name_zoo']);
-         if (isset($datas['created_at'])) $this->set($datas['created_at']);
+         if (isset($datas['created_at'])) $this->setCreatedAt($datas['created_at']);
      }
 
      public function totalAnimals():int
