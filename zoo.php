@@ -1,8 +1,11 @@
 <?php
 
 require_once('./config/autoload.php');
+require_once('./utils/functions.php');
 
 $title = 'Game';
+
+$zooDatas = getZooDatas();
 
 include_once('includes/header.php');
 
@@ -11,7 +14,7 @@ include_once('includes/navbar.php');
 include_once('includes/main-sidebar.php');
 
 // Forms
-//include_once('includes/form-actions.php');
+include_once('includes/forms/change-zoo-name.php');
 
 // Others sections
 include_once('includes/others/contact.php');

@@ -1,6 +1,6 @@
 <?php
 
-class Aviary extends Enclosure
+class AviaryPark extends Enclosure
 {
     private float $height;
     
