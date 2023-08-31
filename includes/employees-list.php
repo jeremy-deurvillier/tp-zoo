@@ -3,6 +3,7 @@ $allEmployees = getAllEmployees();
 ?>
 <div id="employeesList" class="uk-modal-full" uk-modal>
     <div class="uk-modal-dialog uk-modal-body" uk-height-viewport="">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
         <h2 class="uk-modal-title">Liste des employés</h2>
         <div>
             <?php foreach($allEmployees as $employee) { ?>
@@ -18,7 +19,7 @@ $allEmployees = getAllEmployees();
                 <!-- Delete Employee Modal -->
                 <div id="delete-employee-<?= $employee->getId() ?>" uk-modal>
                     <div class="uk-modal-dialog uk-modal-body">
-                    <h2 class="uk-modal-title">Renvoyer <?= $employee->getName() ?> ?</h2>
+                        <h2 class="uk-modal-title">Renvoyer <?= $employee->getName() ?> ?</h2>
                         <p>Vous allez renvoyer un employé. Confirmer le renvoi ?</p>
                         <p class="uk-text-right">
                             <a href="/zoo.php?delete=user&id=<?= $employee->getId() ?>" class="uk-button uk-button-danger">Renvoyer</a>
@@ -34,8 +35,5 @@ $allEmployees = getAllEmployees();
                 </p>
             <?php } ?>
         </div>
-        <p class="uk-text-right">
-            <button class="uk-button uk-button-default uk-modal-close" type="button">Fermer</button>
-        </p>
     </div>
 </div>

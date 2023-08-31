@@ -6,6 +6,13 @@ if ($employee !== null) {
     $MIsChecked = ($employee->getSex() === 'm')?'checked':'';
     $OIsChecked = ($employee->getSex() === 'o')?'checked':'';
 ?>
+<p class="uk-container">
+    <a href="#" class="uk-button uk-button-text" uk-toggle="target: #employeesList">
+        <span uk-icon="icon: chevron-left"></span>
+        Retour à la liste
+    </a>
+</p>
+
 <h2 class="uk-modal-title uk-text-center">Mettre à jour un employé</h2>
 <form action="/zoo.php" method="post" class="uk-flex uk-flex-column uk-flex-center uk-flex-middle">
     <input type="hidden" name="id" value="<?= $employee->getId() ?>">

@@ -1,6 +1,7 @@
 
 <div id="changeName" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
         <h2 class="uk-modal-title">Changer le nom</h2>
         <form action="/zoo.php" method="post" class="uk-flex uk-flex-column uk-flex-center uk-flex-middle">
             <div class="uk-margin-auto">
