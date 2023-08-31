@@ -1,0 +1,45 @@
+#zoo {
+    background: linear-gradient(45deg, #22c55e 1%, #6ee7b7 1%, #6ee7b7 49%, #22c55e 49%, #22c55e 51%, #6ee7b7 51%, #6ee7b7 99%, #22c55e 99%);
+    background-size: 40px 40px;
+    background-position: 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: space-around;
+    padding: 20px;
+}
+
+.parks {
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    border-width: 3px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.land {
+    background-color: #fed7aa;
+    background-image: radial-gradient(circle, #fdba74 16%, transparent 10%), radial-gradient(circle, #fdba74 16%, transparent 10%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 0;
+}
+
+.aviary {
+    background-color: #a7f3d0;
+    background-image: radial-gradient(circle, #6ee7b7 16%, transparent 10%), radial-gradient(circle, #6ee7b7 16%, transparent 10%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 0;
+}
+
+.water {
+    background-color: #bae6fd;
+    background-image: radial-gradient(circle, #7dd3fc 16%, transparent 10%), radial-gradient(circle, #7dd3fc 16%, transparent 10%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 0;
+}
+
+.clean { border-color: #32d296; }
+.good { border-color: #faa05a; }
+.bad { border-color: #f0506e; }

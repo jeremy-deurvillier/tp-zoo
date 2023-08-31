@@ -154,4 +154,48 @@ function deleteEmployee():array
     return [];
 }
 
+function addEnclosure():array
+{
+    if (isset($_GET['enclosure']) && !empty($_GET['enclosure'])) {
+        $enclosuresAvailables = ['land', 'aviary', 'water'];
+
+        if (in_array($_GET['enclosure'], $enclosuresAvailables, true)) {
+            $type = 'danger';
+            $message = '[Enclosure::add] Une erreur s\'est produite.';
+
+            $datas = [
+                'name_enclosure' => $_GET['enclosure'] . '-' . rand(100, 900),
+                'type' => $_GET['enclosure']
+            ];
+
+            if ($_GET['enclosure'] === 'land') $enclosure = new LandPark($datas);
+            if ($_GET['enclosure'] === 'aviary') $enclosure = new AviaryPark($datas);
+            if ($_GET['enclosure'] === 'water') $enclosure = new WaterPark($datas);
+
+            $repository = new EnclosureRepository(dbConnect());
+            $isAdded = $repository->add($enclosure);
+
+            if ($isAdded) {
+                $type = 'success';
+                $message = 'Nouvel enclos ajouté.';
+            }
+
+            return ['type' => $type, 'message' => $message];
+        } else {
+            $type = 'danger';
+            $message = '[Enclosure::add] Cet enclos n\'existe pas.';
+            return ['type' => $type, 'message' => $message];
+        }
+    }
+
+    return [];
+}
+
+function getAllEnclosures():array
+{
+    $repository = new EnclosureRepository(dbConnect());
+
+    return $repository->findAll();
+}
+
 ?>

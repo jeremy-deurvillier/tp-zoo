@@ -13,8 +13,7 @@
             <li class="uk-nav-divider"></li>
 
             <li class="uk-nav-header">Enclos</li>
-            <li><a href="#enclosuresList" data-uk-toggle><span class="uk-margin-small-right" uk-icon="icon: grid"></span>Tous les enclos</a></li>
-            <li><a href="#addEnclosure" data-uk-toggle><span class="uk-margin-small-right" uk-icon="icon: plus"></span>Ajouter</a></li>
+            <li><a href="#enclosuresAvailables" data-uk-toggle><span class="uk-margin-small-right" uk-icon="icon: plus"></span>Ajouter</a></li>
             <li class="uk-nav-divider"></li>
 
             <li class="uk-nav-header">Animaux</li>

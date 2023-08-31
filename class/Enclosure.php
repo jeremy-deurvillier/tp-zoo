@@ -127,7 +127,7 @@ abstract class Enclosure
          if (isset($datas['name_enclosure'])) $this->setName($datas['name_enclosure']);
          if (isset($datas['cleanness'])) $this->setCleanness($datas['cleanness']);
          //if (isset($datas['animals'])) $this->set($datas['animals']);
-         if (isset($datas['type'])) $this->set($datas['type']);
+         if (isset($datas['type'])) $this->setType($datas['type']);
      }
 
      public function counter():int

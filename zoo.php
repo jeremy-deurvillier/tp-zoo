@@ -7,6 +7,7 @@ $zooNameChanged = changeZooName();
 $addEmployee = addEmployee();
 $updateEmployee = updateEmployee();
 $deleteEmployee = deleteEmployee();
+$addEnclosure = addEnclosure();
 
 $title = 'Game';
 
@@ -17,8 +18,17 @@ include_once('includes/navbar.php');
 include_once('includes/main-sidebar.php');
 
 // Sections
-if (isset($_GET['update'])) {
-    if ($_GET['update'] === 'user') include_once('includes/forms/update-employee.php');
+if (count($_GET) === 0) {
+    include('includes/main.php');
+} else {
+    if (isset($_GET['update'])) {
+        if ($_GET['update'] === 'user') include_once('includes/forms/update-employee.php');
+    }
+
+    if (isset($_GET['enclosure'])) {
+        include('includes/main.php');
+        //include_once('includes/forms/update-enclosure.php');
+    }
 }
 
 // Modals
@@ -40,7 +50,8 @@ function datasNotification()
         'zooNameChanged': <?= json_encode($zooNameChanged); ?>,
         'addEmployee': <?= json_encode($addEmployee); ?>,
         'updateEmployee': <?= json_encode($updateEmployee); ?>,
-        'deleteEmployee': <?= json_encode($deleteEmployee); ?>
+        'deleteEmployee': <?= json_encode($deleteEmployee); ?>,
+        'addEnclosure': <?= json_encode($addEnclosure); ?>
     };
 }
 </script>

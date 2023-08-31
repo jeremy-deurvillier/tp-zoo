@@ -1,7 +1,7 @@
 <?php
 $zoo = getZooDatas();
 ?>
-<nav class="uk-navbar-container uk-margin">
+<nav class="uk-navbar-container uk-margin uk-margin-remove-bottom">
     <div class="uk-container">
         <div uk-navbar>
 
